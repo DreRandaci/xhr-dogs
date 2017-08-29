@@ -9,18 +9,18 @@ function breedsJsonLoad(){
 	console.log('Breeds:', data);
 };
 
-executeThisCodeIfFileErrors= () => {
+errorFunction = () => { 
 	console.log('Error');
 };
 
-let dogsJsonRequest = new XMLHttpRequest() 
+let dogsJsonRequest = new XMLHttpRequest; 
 dogsJsonRequest.addEventListener('load', dogsJsonLoad);
-dogsJsonRequest.addEventListener('error', executeThisCodeIfFileErrors);
-dogsJsonRequest.open('GET', './dogs.json');
+dogsJsonRequest.addEventListener('error', errorFunction);
+dogsJsonRequest.open('GET', 'https://random-dogs-api.herokuapp.com/dogs/300');
 dogsJsonRequest.send();
 
-let breedsJsonRequest = new XMLHttpRequest() 
+let breedsJsonRequest = new XMLHttpRequest;
 breedsJsonRequest.addEventListener('load', breedsJsonLoad);
-breedsJsonRequest.addEventListener('error', executeThisCodeIfFileErrors);
+breedsJsonRequest.addEventListener('error', errorFunction);
 breedsJsonRequest.open('GET', './breeds.json');
 breedsJsonRequest.send();
