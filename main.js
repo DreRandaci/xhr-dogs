@@ -16,7 +16,7 @@ dogsJsonRequest.addEventListener('error', errorFunction);
 dogsJsonRequest.open('GET', 'https://random-dogs-api.herokuapp.com/dogs/300');
 dogsJsonRequest.send();
 
-//THIRD THING THAT HAPPENS SO YOU KNOW THAT THE FIRST XML REQUEST IS FINISHED. DOGS ARRAY IS LITERALLY JUST GETTING PASSED THROUGH
+//THIRD THING THAT HAPPENS SO YOU KNOW THAT THE FIRST XML REQUEST IS FINISHED. ARRAY IS LITERALLY JUST GETTING PASSED THROUGH
 function getBreeds(dogsArray){
 	let breedsJsonRequest = new XMLHttpRequest;
 	breedsJsonRequest.addEventListener('load', breedsJsonLoad);
